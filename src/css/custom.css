@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  --ink-text: #173b4d;
+  --ifm-font-family-base: 'Manrope', sans-serif;
+  --ifm-font-family-monospace: 'IBM Plex Mono', monospace;
+  --ifm-heading-font-family: 'Manrope', sans-serif;
+
+  --ifm-color-primary: #1f6f95;
+  --ifm-color-primary-dark: #1b6080;
+  --ifm-color-primary-darker: #185874;
+  --ifm-color-primary-darkest: #12465e;
+  --ifm-color-primary-light: #2780aa;
+  --ifm-color-primary-lighter: #2f89b4;
+  --ifm-color-primary-lightest: #459dc8;
+
+  --ifm-background-color: #f1f7fb;
+  --ifm-navbar-background-color: rgba(241, 247, 251, 0.88);
+  --ifm-navbar-link-color: #1b4258;
+  --ifm-footer-background-color: #0f2c3d;
+  --ifm-footer-color: #d4eaf6;
+  --ifm-footer-link-color: #abd2e8;
+}
+
+html,
+body {
+  background:
+    radial-gradient(circle at 2% 0%, rgba(255, 216, 136, 0.32), transparent 35%),
+    radial-gradient(circle at 96% 8%, rgba(108, 190, 235, 0.22), transparent 35%),
+    linear-gradient(180deg, #e7f1f8 0%, #f1f7fb 40%, #f8fbfe 100%);
+}
+
+.navbar {
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(23, 59, 77, 0.12);
+}
+
+.footer {
+  border-top: 1px solid rgba(212, 234, 246, 0.15);
+}
