@@ -1,4 +1,773 @@
 .page {
   min-height: 100vh;
+  color: #1d1b19;
+  background:
+    radial-gradient(circle at top left, rgba(255, 181, 107, 0.2), transparent 26%),
+    radial-gradient(circle at top right, rgba(77, 124, 255, 0.12), transparent 24%),
+    linear-gradient(180deg, #fffaf3 0%, #fffdfa 34%, #fff 100%);
+}
+
+.hero,
+.section,
+.statement,
+.ctaSection {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(560px, 1.12fr);
+  gap: 36px;
+  align-items: center;
+  padding: 72px 0 44px;
+}
+
+.heroCopy h1,
+.sectionHeading h2,
+.brandCopy h2,
+.ctaPanel h2 {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  letter-spacing: -0.04em;
+}
+
+.heroCopy h1 {
+  font-size: clamp(3.2rem, 7vw, 5.9rem);
+  line-height: 0.94;
+  max-width: 10ch;
+}
+
+.kicker,
+.eyebrow {
+  margin: 0 0 14px;
+  color: #c7651f;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.lead {
+  max-width: 34rem;
+  margin: 22px 0 0;
+  color: #4d4a45;
+  font-size: 1.14rem;
+  line-height: 1.75;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+  font: inherit;
+  text-decoration: none;
+  appearance: none;
+  transition:
+    transform 160ms ease,
+    background-color 160ms ease,
+    border-color 160ms ease,
+    color 160ms ease;
+}
+
+.primaryButton {
+  color: #fffaf3;
+  background: #1f1b17;
+  box-shadow: 0 18px 40px rgba(41, 25, 8, 0.16);
+}
+
+.primaryButton:hover {
+  color: #fffaf3;
+  transform: translateY(-1px);
+}
+
+.secondaryButton {
+  color: #1f1b17;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(31, 27, 23, 0.12);
+}
+
+.secondaryButton:hover {
+  color: #1f1b17;
+  border-color: rgba(31, 27, 23, 0.22);
+  transform: translateY(-1px);
+}
+
+.heroPoints {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0;
+  margin: 28px 0 0;
+  list-style: none;
+}
+
+.heroPoints li {
+  padding: 10px 14px;
+  border: 1px solid rgba(31, 27, 23, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  color: #3d3a35;
+  font-size: 0.96rem;
+}
+
+.heroVisual {
+  position: relative;
+}
+
+.mockWindow {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(31, 27, 23, 0.08);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow:
+    0 22px 80px rgba(45, 23, 4, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(18px);
+}
+
+.mockTopbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  border-bottom: 1px solid rgba(31, 27, 23, 0.08);
+}
+
+.mockLights {
+  display: flex;
+  gap: 8px;
+}
+
+.mockLights span {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #ffa159;
+}
+
+.mockLights span:nth-child(2) {
+  background: #ffd157;
+}
+
+.mockLights span:nth-child(3) {
+  background: #73d86b;
+}
+
+.mockTitle,
+.mockActions,
+.floatingLabel,
+.chartTag,
+.inspectorHeader,
+.mockPanelTitle {
+  font-family: 'SFMono-Regular', 'Menlo', 'Monaco', monospace;
+}
+
+.mockTitle {
+  font-size: 0.88rem;
+  color: #3a3835;
+}
+
+.mockActions {
+  display: flex;
+  gap: 16px;
+  color: #625c53;
+  font-size: 0.82rem;
+}
+
+.mockBody {
+  display: grid;
+  grid-template-columns: 0.72fr 1.22fr 0.66fr;
+  min-height: 560px;
+}
+
+.mockSidebar,
+.mockInspector {
+  padding: 22px 18px;
+  background: rgba(248, 243, 235, 0.82);
+}
+
+.mockSidebar {
+  border-right: 1px solid rgba(31, 27, 23, 0.08);
+}
+
+.mockInspector {
+  border-left: 1px solid rgba(31, 27, 23, 0.08);
+}
+
+.mockPrompt {
+  padding: 16px;
+  border-radius: 18px;
   background: #fff;
+  color: #2d2a26;
+  font-size: 1rem;
+  line-height: 1.7;
+  box-shadow: 0 10px 24px rgba(55, 33, 8, 0.08);
+}
+
+.mockPanel {
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.mockPanelTitle {
+  color: #c7651f;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.mockList {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  color: #433f39;
+  line-height: 1.75;
+}
+
+.mockSources {
+  margin-top: 18px;
+  color: #70675d;
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+.mockCanvas {
+  padding: 28px 28px 22px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, #fff 100%);
+}
+
+.chartHeader h3 {
+  margin: 8px 0 0;
+  font-size: 2rem;
+  letter-spacing: -0.04em;
+}
+
+.chartHeader p {
+  margin: 8px 0 0;
+  color: #726a60;
+}
+
+.chartTag {
+  color: #6a5aed;
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.chart {
+  margin-top: 28px;
+  padding: 22px 20px 18px;
+  border: 1px solid rgba(31, 27, 23, 0.08);
+  border-radius: 24px;
+  background: linear-gradient(180deg, #fff 0%, #fbfaf8 100%);
+}
+
+.chartGrid {
+  display: grid;
+  gap: 56px;
+}
+
+.chartGrid span {
+  height: 1px;
+  background: rgba(31, 27, 23, 0.08);
+}
+
+.barGroup {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  gap: 24px;
+  height: 300px;
+  margin-top: -252px;
+  padding: 0 10px;
+}
+
+.barColumn {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  position: relative;
+  min-width: 94px;
+  height: 100%;
+}
+
+.barColumn label {
+  position: absolute;
+  left: 50%;
+  bottom: -36px;
+  transform: translateX(-50%);
+  color: #4b4843;
+  font-size: 0.92rem;
+}
+
+.bar {
+  width: 40px;
+  border-radius: 16px 16px 8px 8px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.barPrimary {
+  background: linear-gradient(180deg, #6741b4 0%, #4d2f8e 100%);
+}
+
+.barSecondary {
+  background: linear-gradient(180deg, #ffc14d 0%, #f0a61e 100%);
+}
+
+.chartLegend {
+  display: flex;
+  gap: 18px;
+  margin-top: 44px;
+  color: #605951;
+  font-size: 0.88rem;
+}
+
+.chartLegend span {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.chartLegend i {
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  border-radius: 3px;
+}
+
+.legendPrimary {
+  background: #59349a;
+}
+
+.legendSecondary {
+  background: #f2b02f;
+}
+
+.inspectorHeader {
+  margin-bottom: 16px;
+  color: #6a5aed;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.inspectorField {
+  display: grid;
+  gap: 6px;
+  padding: 14px;
+  margin-bottom: 12px;
+  border: 1px solid rgba(31, 27, 23, 0.08);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.inspectorField span {
+  color: #776f65;
+  font-size: 0.84rem;
+}
+
+.inspectorField strong {
+  color: #2f2a26;
+  font-size: 0.98rem;
+}
+
+.inspectorFooter {
+  margin-top: 16px;
+  color: #7a7269;
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.floatingCards {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.floatingCard {
+  width: 184px;
+  padding: 14px 15px;
+  border: 1px solid rgba(31, 27, 23, 0.08);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 18px 40px rgba(43, 26, 7, 0.1);
+  backdrop-filter: blur(14px);
+}
+
+.floatingCard strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.98rem;
+}
+
+.floatingCard p {
+  margin: 8px 0 0;
+  color: #665f56;
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.floatingLabel {
+  color: #c7651f;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.statement {
+  padding: 18px 0 4px;
+}
+
+.statement p:first-child {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  letter-spacing: -0.05em;
+}
+
+.statement p:last-child {
+  max-width: 50rem;
+  margin: 14px 0 0;
+  color: #5a544d;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.section {
+  padding: 84px 0 0;
+}
+
+.sectionHeading {
+  max-width: 42rem;
+}
+
+.sectionHeading h2 {
+  font-size: clamp(2.3rem, 4vw, 3.5rem);
+  line-height: 1;
+}
+
+.sectionHeading p {
+  margin: 16px 0 0;
+  color: #5c564d;
+  font-size: 1.02rem;
+  line-height: 1.8;
+}
+
+.cardGrid,
+.exampleGrid,
+.screenshotGrid {
+  display: grid;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.cardGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.card,
+.exampleCard,
+.screenshotCard,
+.workflowStep,
+.ctaPanel {
+  border: 1px solid rgba(31, 27, 23, 0.08);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0 20px 40px rgba(43, 26, 7, 0.05);
+}
+
+.card {
+  padding: 24px;
+}
+
+.card h3,
+.exampleCard h3,
+.screenshotCard h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.card p,
+.exampleCard p,
+.screenshotCard p {
+  margin: 10px 0 0;
+  color: #59544c;
+  line-height: 1.75;
+}
+
+.workflowSection {
+  padding-top: 94px;
+}
+
+.workflow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.workflowStep {
+  padding: 22px 18px;
+}
+
+.workflowStep span {
+  display: inline-block;
+  color: #c7651f;
+  font-family: 'SFMono-Regular', 'Menlo', 'Monaco', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
+.workflowStep p {
+  margin: 12px 0 0;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.brandSection {
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.brandCopy p {
+  color: #5c564d;
+  line-height: 1.85;
+}
+
+.exampleGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.exampleCard {
+  padding: 22px;
+}
+
+.exampleCard span {
+  color: #c7651f;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.screenshotGrid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.screenshotCard {
+  padding: 18px;
+}
+
+.screenshotCard small {
+  display: block;
+  margin-top: 12px;
+  color: #7c746b;
+  line-height: 1.6;
+}
+
+.placeholderFrame {
+  padding: 10px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #fff8f0 0%, #f7f1ea 100%);
+  border: 1px solid rgba(31, 27, 23, 0.08);
+}
+
+.placeholderBar {
+  height: 16px;
+  border-radius: 999px;
+  background: rgba(31, 27, 23, 0.08);
+}
+
+.placeholderBody {
+  display: grid;
+  grid-template-columns: 0.7fr 1.1fr 0.6fr;
+  gap: 10px;
+  margin-top: 10px;
+  min-height: 140px;
+}
+
+.placeholderSidebar,
+.placeholderCanvas {
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.placeholderCanvas {
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholderCanvas::before,
+.placeholderCanvas::after {
+  content: '';
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  height: 1px;
+  background: rgba(31, 27, 23, 0.08);
+}
+
+.placeholderCanvas::before {
+  top: 42px;
+}
+
+.placeholderCanvas::after {
+  top: 86px;
+}
+
+.ctaSection {
+  padding: 92px 0 110px;
+}
+
+.ctaPanel {
+  padding: 34px;
+  background:
+    radial-gradient(circle at top right, rgba(255, 194, 126, 0.28), transparent 28%),
+    linear-gradient(180deg, #2a2118 0%, #18130f 100%);
+  color: #fdf6ee;
+}
+
+.ctaPanel h2 {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+}
+
+.ctaPanel p:last-of-type {
+  max-width: 34rem;
+  color: rgba(253, 246, 238, 0.78);
+  line-height: 1.8;
+}
+
+.ctaPanel .eyebrow {
+  color: #ffbf77;
+}
+
+.ctaPanel .secondaryButton {
+  color: #fff3e2;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.ctaPanel .secondaryButton:hover {
+  color: #fff3e2;
+  border-color: rgba(255, 255, 255, 0.24);
+}
+
+@media (max-width: 1120px) {
+  .hero,
+  .brandSection {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 52px;
+  }
+
+  .floatingCards {
+    position: static;
+    padding: 0 18px 18px;
+  }
+}
+
+@media (max-width: 960px) {
+  .mockBody,
+  .cardGrid,
+  .workflow,
+  .exampleGrid,
+  .screenshotGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .mockCanvas {
+    order: -1;
+  }
+
+  .barGroup {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero,
+  .section,
+  .statement,
+  .ctaSection {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .hero {
+    gap: 24px;
+    padding-top: 36px;
+  }
+
+  .heroCopy h1 {
+    max-width: 8ch;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .mockTopbar {
+    grid-template-columns: auto 1fr;
+  }
+
+  .mockActions {
+    display: none;
+  }
+
+  .mockCanvas,
+  .mockSidebar,
+  .mockInspector {
+    padding: 18px 16px;
+  }
+
+  .chartHeader h3 {
+    font-size: 1.5rem;
+  }
+
+  .chart {
+    padding: 18px 14px 16px;
+  }
+
+  .bar {
+    width: 30px;
+  }
+
+  .barColumn {
+    min-width: 70px;
+  }
+
+  .floatingCards {
+    flex-direction: column;
+  }
+
+  .floatingCard {
+    width: auto;
+  }
+
+  .ctaPanel {
+    padding: 24px 20px;
+  }
 }
