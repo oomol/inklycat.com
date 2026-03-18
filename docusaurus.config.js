@@ -71,7 +71,7 @@ const config = {
       title: 'Inkly Cat',
       logo: {
         alt: 'Inkly Cat Logo',
-        src: 'img/inklycat-logo.svg',
+        src: 'img/logo.png',
       },
       items: [
         {
