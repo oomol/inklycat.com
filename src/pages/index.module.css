@@ -92,6 +92,14 @@
   line-height: 1.84;
 }
 
+.heroSupport {
+  margin: 16px 0 0;
+  color: color-mix(in srgb, var(--oomol-primary-dark) 76%, var(--oomol-text-primary) 24%);
+  font-size: 0.95rem;
+  font-weight: 650;
+  letter-spacing: 0.01em;
+}
+
 .heroActions,
 .ctaActions {
   display: flex;
