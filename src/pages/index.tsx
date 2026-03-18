@@ -10,76 +10,98 @@ const links = {
   windowsX64: 'https://app-downloads.oomol.com/inkly-cat/win32/x64',
 };
 
-const highlights = [
+const heroTabs = ['编写报告', '图表编辑', '技能复用', '数据分析'];
+
+const heroSteps = [
+  '先清洗字段并确认统计口径',
+  '生成可继续编辑的图表和表格',
+  '整理结果摘要与后续复核点',
+];
+
+const demoPoints = ['同一任务上下文', '图表仍可编辑', '结果可继续打磨'];
+
+const proofHighlights = [
   {
-    label: '结果闭环',
-    title: '从原始数据推进到图表和结果段落',
-    body: '不只停在分析建议，把表格处理、脚本执行、图表生成和结果整理接成一条完整工作线。',
+    title: '一站式做完，无需来回导出切换',
+    body: '文件处理、脚本执行、图表编辑和结果说明都留在一个工作面里，减少被工具切换打断。',
   },
   {
-    label: '可复核',
-    title: '图表、统计和说明可以一起回看',
-    body: '不仅有输出结果，也保留过程线索，便于检查分析路径、图表参数和最终结论。',
+    title: '和你一起修改，而不只是一次性生成',
+    body: '更适合反复打磨的正式任务。你拿到的不是终点图，而是可以继续推进的中间成果。',
   },
   {
-    label: '方法复用',
-    title: '高频分析方法可以沉淀成团队资产',
-    body: '把常用分析动作收敛成技能，把稳定流程做成小程序，让下一次工作不必重新搭一遍。',
+    title: '把图表、分析和说明一起往前推',
+    body: '研究和分析工作真正麻烦的是上下文容易散。Inkly Cat 把图和结论尽量留在同一条线上。',
+  },
+  {
+    title: '把方法收敛成可复用流程',
+    body: '高频动作做成技能，边界清晰的步骤做成小程序，让下次工作不用重新搭一遍。',
   },
 ];
 
-const workflowSteps = [
+const templates = [
   {
-    title: '导入原始数据',
-    body: 'CSV、Excel、实验记录和既有结果可以直接进入同一任务上下文。',
+    kicker: 'Report Template',
+    title: '周度用户行为分析报告',
+    body: '把埋点表整理、趋势图输出和结果摘要连成一张正式结果页。',
+    chips: ['字段清洗', '趋势图', '摘要整理'],
+    note: '适合接入真实任务入口',
+    image: '/img/agent_chart_edit.png',
+    visual: 'report',
   },
   {
-    title: '运行脚本与分析',
-    body: '清洗、计算、统计检验和脚本执行留在同一条工作线上，不必来回切换工具。',
-  },
-  {
-    title: '生成并编辑图表',
-    body: '拿到的是可以继续修改和正式导出的图表、表格与结构化发现，不是一次性截图。',
-  },
-  {
-    title: '整理可交付结果',
-    body: '把图注、结果段落和关键说明一起整理出来，便于汇报、投稿或归档。',
-  },
-];
-
-const featureCards = [
-  {
-    eyebrow: 'Skills',
-    title: '把高频分析动作收敛成技能',
-    body: '把常用清洗、分析和结果整理动作固定下来，减少临时拼接，让方法可以重复调用。',
-    image: '/img/agent_skills.png',
-    alt: 'Inkly Cat 技能界面截图',
-  },
-  {
-    eyebrow: 'Mini Apps',
-    title: '把稳定流程交给小程序执行',
-    body: '适合文件转换、批处理和输入明确的分析流程，让结果更稳定，也更容易在团队内复用。',
+    kicker: 'Automation Flow',
+    title: 'CSV 批量标准化',
+    body: '命名规则、格式转换和异常值检查可以固定成稳定流程。',
+    chips: ['批处理', '格式转换', '复核占位'],
+    note: '适合沉淀成小程序',
     image: '/img/agent_miniapps.png',
-    alt: 'Inkly Cat 小程序界面截图',
+    visual: 'panel',
+  },
+  {
+    kicker: 'Research Output',
+    title: '实验统计结果页',
+    body: '把检验路径、图表和结果段落放在一起，适合研究场景。',
+    chips: ['统计检验', '图表编辑', '结果段落'],
+    note: '适合研究和正式交付',
+    image: '/img/agent_main.png',
+    visual: 'dashboard',
+  },
+  {
+    kicker: 'Coming Next',
+    title: '案例中心占位',
+    body: '后续可直接替换成真实案例、公开视频或模板入口，不需要再改版式。',
+    chips: ['占位模块', '后续扩展', '素材待补'],
+    note: '内容准备好后可直接替换',
+    image: '',
+    visual: 'placeholder',
   },
 ];
 
-const scenarios = [
+const storyCards = [
   {
-    title: '科研与专业分析任务',
-    body: '适合那些不只需要看懂数据，还要把图表、结论和说明整理成正式结果的工作。',
+    label: 'Video Story',
+    title: '案例视频占位',
+    role: '研究工作流演示',
+    body: '这里预留给 30 到 60 秒的真实工作录像，适合展示从表格到图表的连续操作。',
+    action: '观看演示',
+    tone: 'video',
   },
   {
-    title: '生命科学、医学、心理学等研究场景',
-    body: '更适合对统计检验、图表质量和可复核性有明确要求的研究与分析工作。',
+    label: 'Customer Story',
+    title: '客户证言占位',
+    role: '正式结果交付',
+    body: '这里预留给真实反馈，重点建议围绕“少了哪些来回切换”来写，而不是泛泛夸功能。',
+    action: '查看反馈',
+    tone: 'quote',
   },
   {
-    title: '表格与文件预处理',
-    body: '处理字段、格式、类型和批量转换，把原始文件整理成可直接分析的输入。',
-  },
-  {
-    title: '团队模板与流程复用',
-    body: '把重复工作沉淀成技能与小程序，让常见分析流程、图表样式和交付方式变成可复用资产。',
+    label: 'Team Story',
+    title: '团队协作占位',
+    role: '流程复用',
+    body: '如果未来要强调模板共享、结果复核或方法移交，这里已经有对应的呈现位置。',
+    action: '了解场景',
+    tone: 'team',
   },
 ];
 
@@ -97,206 +119,259 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Inkly Cat | 把科研数据变成可发表结果</title>
+        <title>Inkly Cat | A different way to finish data work</title>
         <meta
           name="description"
-          content="面向科研与高要求分析场景的结果型 agent，把表格处理、脚本执行、图表生成、结果段落和交付整理接成一条可复核的工作线。"
+          content="处理表格，运行脚本，生成图表，把结果整理清楚。Inkly Cat 面向研究与高要求分析任务，把数据工作真正推进到可复核、可交付的结果。"
         />
       </Head>
       <main id="top" className={styles.page}>
         <section className={styles.hero}>
-          <div className={styles.heroCopy}>
-            <p className={styles.kicker}>Inkly Cat / Scientific Analysis Workspace</p>
-            <h1>
-              <span className={styles.heroHeadingLine}>把科研数据变成</span>
-              <span className={styles.heroHeadingLine}>可发表结果</span>
-            </h1>
-            <p className={styles.lead}>
-              处理表格，运行脚本，生成期刊级图表，把结果段落和说明整理清楚。
-              让原始数据更顺地推进成可复核、可交付的正式分析结果。
-            </p>
-            <p className={styles.heroSupport}>支持 CSV、Excel、代码执行、Bash 工作流和图表导出。</p>
-            <div className={styles.heroActions}>
-              <a
-                className={styles.primaryButton}
-                href={links.webApp}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                打开 Web 版
-              </a>
-              <button className={styles.secondaryButton} type="button" onClick={() => scrollToSection('showcase')}>
-                看工作界面
+          <p className={styles.eyebrow}>Inkly Cat / Result-Oriented Data Workspace</p>
+          <h1 className={styles.heroTitle}>
+            <span className={styles.heroLine}>
+              让 AI 更<span className={styles.highlight}>深入</span>地参与
+            </span>
+            <span className={styles.heroLine}>把数据工作做完</span>
+          </h1>
+          <p className={styles.heroLead}>
+            处理表格，运行脚本，生成图表，把结果整理清楚。不是停在建议，而是把研究和分析任务真正往前推进。
+          </p>
+          <div className={styles.heroActions}>
+            <a className={styles.primaryButton} href={links.webApp} target="_blank" rel="noopener noreferrer">
+              立即体验
+            </a>
+          </div>
+
+          <div className={styles.heroTabs}>
+            {heroTabs.map((tab, index) => (
+              <button key={tab} className={index === 0 ? styles.heroTabActive : styles.heroTab} type="button">
+                {tab}
               </button>
-            </div>
-            <div className={styles.platformLinks}>
-              <span>下载客户端</span>
-              <a href={links.macArm}>macOS（ARM）</a>
-              <a href={links.windowsX64}>Windows（x64）</a>
-              <a href={links.iosAppStore} target="_blank" rel="noopener noreferrer">
-                iOS App Store
-              </a>
-            </div>
-            <p className={styles.downloadMeta}>
-              macOS 仅支持 Apple Silicon（ARM）。如果你先想判断这条工作流是否适合你的研究或分析任务，直接打开 Web 版就够了。
-            </p>
-            <div className={styles.heroSummary}>
-              <div>
-                <strong>适合的任务</strong>
-                <p>需要反复分析、编辑图表、整理结论并最终交付的科研与高要求分析任务。</p>
-              </div>
-              <div>
-                <strong>不想再发生的事</strong>
-                <p>在 Excel、脚本环境、图表工具和结果文档之间来回切换，导致上下文被打散。</p>
-              </div>
-            </div>
+            ))}
           </div>
 
           <div className={styles.heroStage}>
-            <div className={styles.heroStageFrame}>
-              <div className={styles.heroStageMeta}>
-                <span>Live Workspace</span>
-                <span>Prompt / Analysis / Chart / Delivery</span>
+            <div className={styles.stageSidebar}>
+              <div className={styles.stageUserMessage}>
+                I want to turn this week&apos;s raw traffic table into a clean report I can share.
               </div>
-              <div className={styles.heroImageWrap}>
-                <Screenshot src="/img/agent_main.png" alt="Inkly Cat 主工作台截图" priority />
+
+              <div className={styles.stageAssistant}>
+                <p>我会先完成三个阶段:</p>
+                <ul>
+                  {heroSteps.map((step) => (
+                    <li key={step}>{step}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className={styles.stagePromptBox}>
+                <span>Ask, clean, analyze anything</span>
               </div>
             </div>
 
-            <div className={styles.heroAnnotationPrimary}>
-              <strong>同一任务上下文</strong>
-              <p>分析、出图和结果整理没有断层。</p>
-            </div>
+            <div className={styles.stageCanvas}>
+              <div className={styles.stageReportHero}>
+                <div>
+                  <strong>Weekly Data Result Page</strong>
+                  <p>把图表、摘要和关键发现组织成正式结果页。</p>
+                </div>
+              </div>
 
-            <div className={styles.heroAnnotationSecondary}>
-              <span>结果仍可编辑</span>
-              <p>拿到的不是终点图，而是还能继续推进的工作结果。</p>
+              <div className={styles.stageCanvasImage}>
+                <Screenshot src="/img/agent_chart_edit.png" alt="Inkly Cat 图表编辑界面截图" priority />
+              </div>
+
+              <div className={styles.stageResultRow}>
+                <article>
+                  <strong>字段清洗</strong>
+                  <p>统一类型和命名</p>
+                </article>
+                <article>
+                  <strong>图表输出</strong>
+                  <p>继续编辑而非终稿截图</p>
+                </article>
+                <article>
+                  <strong>结果摘要</strong>
+                  <p>结论与复核点并排整理</p>
+                </article>
+              </div>
             </div>
+          </div>
+
+          <div className={styles.downloadLinks}>
+            <a href={links.macArm}>macOS（ARM）</a>
+            <a href={links.windowsX64}>Windows（x64）</a>
+            <a href={links.iosAppStore} target="_blank" rel="noopener noreferrer">
+              iOS App Store
+            </a>
           </div>
         </section>
 
-        <section className={styles.highlightBand}>
-          {highlights.map((item) => (
-            <article key={item.title} className={styles.highlightCard}>
-              <p className={styles.highlightLabel}>{item.label}</p>
-              <h2>{item.title}</h2>
-              <p>{item.body}</p>
-            </article>
-          ))}
-        </section>
-
-        <section id="showcase" className={styles.showcaseSection}>
-          <div className={styles.sectionIntro}>
-            <p className={styles.eyebrow}>Product View</p>
-            <h2>从分析过程到图表编辑，工作流在一个界面里接起来</h2>
-            <p>产品最强的地方不是“能回答”，而是能把数据处理、脚本执行、图表编辑和结果整理留在同一条工作线上。</p>
-          </div>
-
-          <div className={styles.showcaseFrame}>
-            <div className={styles.showcaseVisual}>
-              <Screenshot src="/img/agent_chart_edit.png" alt="Inkly Cat 图表编辑工作台截图" />
-            </div>
-            <div className={styles.showcaseNarrative}>
-              <div className={styles.featureCopy}>
-                <p className={styles.eyebrow}>Chart Editor</p>
-                <h3>分析过程、图表本体和编辑面板并排展开</h3>
-                <p>
-                  左边保留任务上下文，中间是图表，右边是编辑面板。你拿到的不是一张结束的图，而是一份可以继续调整、复核并正式导出的分析结果。
-                </p>
+        <section className={styles.demoSection}>
+          <div className={styles.demoFrame}>
+            <div className={styles.demoMedia}>
+              <div className={styles.demoBackdrop}>
+                <div className={styles.demoScreen}>
+                  <Screenshot src="/img/agent_main.png" alt="Inkly Cat 主工作台截图" />
+                </div>
               </div>
-              <div id="workflow" className={styles.workflowRail}>
-                {workflowSteps.map((step, index) => (
-                  <article key={step.title} className={styles.workflowStep}>
-                    <span>{String(index + 1).padStart(2, '0')}</span>
-                    <div>
-                      <h4>{step.title}</h4>
-                      <p>{step.body}</p>
-                    </div>
-                  </article>
+              <button className={styles.demoPlay} type="button">
+                Play Demo
+              </button>
+            </div>
+
+            <div className={styles.demoSummary}>
+              <h2>不止是会回答，而是能把数据工作继续做下去</h2>
+              <p>处理文件、执行脚本、生成图表、整理说明，这些步骤尽量留在同一个工作面里，让任务不要在不同工具之间断掉。</p>
+              <div className={styles.demoPoints}>
+                {demoPoints.map((point) => (
+                  <span key={point}>{point}</span>
                 ))}
               </div>
             </div>
           </div>
         </section>
 
-        <section id="reusable" className={styles.featureSection}>
-          <div className={styles.sectionIntro}>
-            <p className={styles.eyebrow}>Reusable Layers</p>
-            <h2>把一次分析沉淀成可复用方法</h2>
-            <p>把高频动作变成技能，把稳定流程变成小程序，让下一次分析不必重新搭一遍。</p>
-          </div>
+        <section id="showcase" className={styles.differenceSection}>
+          <h2>Inkly Cat，大不同</h2>
 
-          <div className={styles.featureShowcase}>
-            {featureCards.map((card, index) => (
-              <article
-                key={card.title}
-                className={index === 0 ? styles.featureCardPrimary : styles.featureCardSecondary}
-              >
-                <div className={styles.featureCardImage}>
-                  <Screenshot src={card.image} alt={card.alt} />
-                </div>
-                <div className={styles.featureCardCopy}>
-                  <p className={styles.eyebrow}>{card.eyebrow}</p>
-                  <h3>{card.title}</h3>
-                  <p>{card.body}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section id="use-cases" className={styles.scenarioSection}>
-          <div className={styles.sectionIntro}>
-            <p className={styles.eyebrow}>Use Cases</p>
-            <h2>更适合那些对结果质量和可复核性有要求的研究与分析任务</h2>
-            <p>Inkly Cat 不是万能 agent，它更适合那些既要分析，也要把结果整理成正式交付物的工作。</p>
-          </div>
-
-          <div className={styles.scenarioList}>
-            {scenarios.map((scenario, index) => (
-              <article key={scenario.title} className={styles.scenarioRow}>
-                <span>{String(index + 1).padStart(2, '0')}</span>
-                <div>
-                  <h3>{scenario.title}</h3>
-                  <p>{scenario.body}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section id="contact" className={styles.ctaSection}>
-          <div className={styles.ctaPanel}>
-            <div className={styles.ctaLead}>
-              <p className={styles.eyebrow}>Inkly Cat</p>
-              <h2>先看工作流，再决定要不要接进你的研究流程</h2>
-              <p>如果你关心的是原始数据能不能真正推进成图表、结果段落和可交付材料，先看真实工作界面会比看一串功能点更有效。</p>
+          <div className={styles.featureLead}>
+            <div className={styles.featureVisual}>
+              <Screenshot src="/img/agent_main.png" alt="Inkly Cat 主工作台截图" />
             </div>
-            <div className={styles.ctaAside}>
-              <div className={styles.ctaActions}>
-                <a
-                  className={styles.primaryButton}
-                  href={links.webApp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  打开 Web 版
-                </a>
-                <button className={styles.secondaryButton} type="button" onClick={() => scrollToSection('showcase')}>
-                  看工作界面
+
+            <div className={styles.featureCopy}>
+              <p className={styles.eyebrow}>Workspace</p>
+              <h3>图表、脚本和结果整理留在同一工作面</h3>
+              <p>工作真正复杂的地方，不是某一步不会做，而是每一步都散在不同工具里。Inkly Cat 试图把这些断点重新接起来。</p>
+              <button className={styles.inlineLink} type="button" onClick={() => scrollToSection('templates')}>
+                看示例任务
+              </button>
+            </div>
+          </div>
+
+          <div id="workflow" className={styles.proofGrid}>
+            {proofHighlights.map((item) => (
+              <article key={item.title} className={styles.proofCard}>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+                <button className={styles.inlineLink} type="button" onClick={() => scrollToSection('contact')}>
+                  去试试
                 </button>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="templates" className={styles.templatesSection}>
+          <div className={styles.templatesHeader}>
+            <h2>把常见数据任务直接展示出来</h2>
+            <p>比起堆功能点，更直接的方式是让用户看到这套工作流适合处理什么。真实案例还没补齐的部分继续先占位。</p>
+            <a className={styles.primaryButton} href={links.webApp} target="_blank" rel="noopener noreferrer">
+              限时试用 Web 版
+            </a>
+          </div>
+
+          <div className={styles.templateGrid}>
+            {templates.map((item) => (
+              <article
+                key={item.title}
+                className={[
+                  item.visual === 'report'
+                    ? styles.templateCardWide
+                    : item.visual === 'dashboard'
+                      ? styles.templateCardTall
+                      : styles.templateCard,
+                  item.visual === 'report'
+                    ? styles.templateCardReport
+                    : item.visual === 'panel'
+                      ? styles.templateCardPanel
+                      : item.visual === 'dashboard'
+                        ? styles.templateCardDashboard
+                        : styles.templateCardPlaceholder,
+                ].join(' ')}
+              >
+                <div className={styles.templateVisual}>
+                  {item.image ? (
+                    <Screenshot src={item.image} alt={item.title} />
+                  ) : (
+                    <div className={styles.templatePlaceholder}>
+                      <span>Content Placeholder</span>
+                    </div>
+                  )}
+                </div>
+
+                <div className={styles.templateContent}>
+                  <p className={styles.templateKicker}>{item.kicker}</p>
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                  <div className={styles.templateChips}>
+                    {item.chips.map((chip) => (
+                      <span key={chip}>{chip}</span>
+                    ))}
+                  </div>
+                  <div className={styles.templateNote}>{item.note}</div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="reusable" className={styles.reuseSection}>
+          <h2>把高频动作沉淀成技能，把稳定流程交给小程序</h2>
+          <p>当一次工作流有效，就不应该下次再从头搭起。把方法留住，才会真正越用越顺。</p>
+
+          <div className={styles.reuseGrid}>
+            <article className={styles.reusePanel}>
+              <div className={styles.reuseImage}>
+                <Screenshot src="/img/agent_skills.png" alt="Inkly Cat 技能界面截图" />
               </div>
-              <div className={styles.ctaDownloads}>
-                <a href={links.macArm}>macOS（ARM）</a>
-                <a href={links.windowsX64}>Windows（x64）</a>
-                <a href={links.iosAppStore} target="_blank" rel="noopener noreferrer">
-                  iOS App Store
-                </a>
+              <div className={styles.reuseCopy}>
+                <p className={styles.eyebrow}>Skills</p>
+                <h3>把高频分析方法做成技能</h3>
+                <p>把常用清洗、分析和结果整理动作固定下来，下次可以直接复用，不必重新搭流程。</p>
               </div>
-              <p className={styles.downloadMeta}>
-                macOS 仅支持 Apple Silicon（ARM），Windows 提供 x64 版本，iOS 通过 App Store 安装。
-              </p>
-            </div>
+            </article>
+
+            <article className={styles.reusePanel}>
+              <div className={styles.reuseImage}>
+                <Screenshot src="/img/agent_miniapps.png" alt="Inkly Cat 小程序界面截图" />
+              </div>
+              <div className={styles.reuseCopy}>
+                <p className={styles.eyebrow}>Mini Apps</p>
+                <h3>把输入明确的流程交给小程序</h3>
+                <p>批处理、文件转换和边界清晰的分析任务适合沉淀成更稳定的工作单元，方便团队内复用。</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="use-cases" className={styles.storiesSection}>
+          <h2>让团队更好更快地完成工作</h2>
+          <p className={styles.storiesLead}>真实视频、用户证言和团队案例还没上，但这一段的展示容器已经先搭好了。</p>
+          <div className={styles.storyGrid}>
+            {storyCards.map((card) => (
+              <article key={card.title} className={[styles.storyCard, styles[`storyCard${card.tone[0].toUpperCase()}${card.tone.slice(1)}`]].join(' ')}>
+                <div className={[styles.storyVisual, styles[`storyVisual${card.tone[0].toUpperCase()}${card.tone.slice(1)}`]].join(' ')}>
+                  <span>{card.action}</span>
+                </div>
+                <p className={styles.storyLabel}>{card.label}</p>
+                <h3>{card.title}</h3>
+                <strong>{card.role}</strong>
+                <p>{card.body}</p>
+              </article>
+            ))}
+          </div>
+
+          <div id="contact" className={styles.footerActions}>
+            <a className={styles.primaryButton} href={links.webApp} target="_blank" rel="noopener noreferrer">
+              免费试用
+            </a>
+            <button className={styles.secondaryButton} type="button" onClick={() => scrollToSection('top')}>
+              回到顶部
+            </button>
           </div>
         </section>
       </main>
