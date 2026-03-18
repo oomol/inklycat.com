@@ -1,8 +1,8 @@
 // @ts-check
 
 const config = {
-  title: 'Inklycat',
-  tagline: 'AI Agent for Data Analysis',
+  title: ' ',
+  tagline: '',
   url: 'https://inklycat.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -34,36 +34,7 @@ const config = {
     ],
   ],
 
-  themeConfig: {
-    navbar: {
-      title: 'Inklycat',
-      items: [
-        { href: '/#capabilities', label: 'Capabilities', position: 'left' },
-        { href: '/#workflow', label: 'Workflow', position: 'left' },
-        { href: '/#scenarios', label: 'Scenarios', position: 'left' },
-        { href: '/#faq', label: 'FAQ', position: 'left' },
-        {
-          href: 'mailto:hello@inklycat.com',
-          label: 'Contact',
-          position: 'right',
-        },
-      ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Product',
-          items: [{ label: 'Overview', to: '/' }],
-        },
-        {
-          title: 'Company',
-          items: [{ label: 'Contact', href: 'mailto:hello@inklycat.com' }],
-        },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Inklycat Labs.`,
-    },
-  },
+  themeConfig: {},
 };
 
 module.exports = config;
