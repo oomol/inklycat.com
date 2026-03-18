@@ -2,7 +2,7 @@
 
 const config = {
   title: 'Inkly Cat',
-  tagline: 'A focused workspace for data analysis work.',
+  tagline: 'Turn scientific data into publishable results.',
   url: 'https://inklycat.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -39,12 +39,12 @@ const config = {
       {
         name: 'description',
         content:
-          'Inkly Cat is a focused workspace for data analysis work, connecting table processing, scripts, chart editing, and structured results.',
+          'Inkly Cat is a results-oriented workspace for scientific and high-rigor analysis, connecting data processing, scripts, charts, and structured deliverables.',
       },
       {
         name: 'keywords',
         content:
-          'Inkly Cat, data analysis agent, data analysis workspace, chart editor, table processing, scripts, workflow, OOMOL',
+          'Inkly Cat, scientific analysis agent, research workflow, publishable charts, statistical analysis, chart editor, data processing, OOMOL',
       },
     ],
     headTags: [
@@ -57,7 +57,7 @@ const config = {
           '@context': 'https://schema.org',
           '@type': 'Organization',
           name: 'Inkly Cat',
-          tagline: 'A focused workspace for data analysis work.',
+          tagline: 'Turn scientific data into publishable results.',
           url: 'https://inklycat.com',
         }),
       },
@@ -87,7 +87,7 @@ const config = {
           'data-noBrokenLinkCheck': true,
         },
         {
-          label: '适用场景',
+          label: '研究场景',
           position: 'left',
           to: '/#use-cases',
           'data-noBrokenLinkCheck': true,
@@ -135,10 +135,10 @@ const config = {
           ],
         },
         {
-          title: '数据分析',
+          title: '科研分析',
           items: [
             {
-              label: '适用场景',
+              label: '研究场景',
               to: '/#use-cases',
               'data-noBrokenLinkCheck': true,
             },

@@ -12,38 +12,38 @@ const links = {
 
 const highlights = [
   {
-    label: '同屏工作',
-    title: '对话、图表、编辑器放在一处',
-    body: '任务上下文不会在导出前断掉，适合需要持续判断和修改的数据分析工作。',
+    label: '结果闭环',
+    title: '从原始数据推进到图表和结果段落',
+    body: '不只停在分析建议，把表格处理、脚本执行、图表生成和结果整理接成一条完整工作线。',
   },
   {
-    label: '继续编辑',
-    title: '图不是终点，而是可继续迭代的结果',
-    body: '拿到的是可复核、可调整、可正式导出的图表资产，而不是一次性截图。',
+    label: '可复核',
+    title: '图表、统计和说明可以一起回看',
+    body: '不仅有输出结果，也保留过程线索，便于检查分析路径、图表参数和最终结论。',
   },
   {
-    label: '沉淀方法',
-    title: '高频分析动作可以被复用',
-    body: '把常见分析动作收敛成技能，把稳定流程做成小程序，让方法留在团队里。',
+    label: '方法复用',
+    title: '高频分析方法可以沉淀成团队资产',
+    body: '把常用分析动作收敛成技能，把稳定流程做成小程序，让下一次工作不必重新搭一遍。',
   },
 ];
 
 const workflowSteps = [
   {
-    title: '导入原始材料',
-    body: 'CSV、Excel、实验记录和既有结果都可以直接进入同一任务。',
+    title: '导入原始数据',
+    body: 'CSV、Excel、实验记录和既有结果可以直接进入同一任务上下文。',
   },
   {
-    title: '保留分析过程',
-    body: '清洗、计算、运行脚本时，不需要在不同工具之间反复切换。',
+    title: '运行脚本与分析',
+    body: '清洗、计算、统计检验和脚本执行留在同一条工作线上，不必来回切换工具。',
   },
   {
-    title: '生成并编辑结果',
-    body: '图表、表格和结构化结论生成后，可以继续修改，不会停在一次性输出。',
+    title: '生成并编辑图表',
+    body: '拿到的是可以继续修改和正式导出的图表、表格与结构化发现，不是一次性截图。',
   },
   {
-    title: '导出正式交付物',
-    body: '把可复核的过程和可提交的结果一起整理出来，便于汇报与归档。',
+    title: '整理可交付结果',
+    body: '把图注、结果段落和关键说明一起整理出来，便于汇报、投稿或归档。',
   },
 ];
 
@@ -51,14 +51,14 @@ const featureCards = [
   {
     eyebrow: 'Skills',
     title: '把高频分析动作收敛成技能',
-    body: '把常用动作固定下来，减少临时拼接，让方法可重复调用。',
+    body: '把常用清洗、分析和结果整理动作固定下来，减少临时拼接，让方法可以重复调用。',
     image: '/img/agent_skills.png',
     alt: 'Inkly Cat 技能界面截图',
   },
   {
     eyebrow: 'Mini Apps',
     title: '把稳定流程交给小程序执行',
-    body: '适合文件转换、批处理和输入明确的流程，让结果更稳定，也更容易团队复用。',
+    body: '适合文件转换、批处理和输入明确的分析流程，让结果更稳定，也更容易在团队内复用。',
     image: '/img/agent_miniapps.png',
     alt: 'Inkly Cat 小程序界面截图',
   },
@@ -66,20 +66,20 @@ const featureCards = [
 
 const scenarios = [
   {
-    title: '数据分析与专业工作',
-    body: '不只看懂数据，还要把图表、结论和说明整理成正式结果。',
+    title: '科研与专业分析任务',
+    body: '适合那些不只需要看懂数据，还要把图表、结论和说明整理成正式结果的工作。',
+  },
+  {
+    title: '生命科学、医学、心理学等研究场景',
+    body: '更适合对统计检验、图表质量和可复核性有明确要求的研究与分析工作。',
   },
   {
     title: '表格与文件预处理',
     body: '处理字段、格式、类型和批量转换，把原始文件整理成可直接分析的输入。',
   },
   {
-    title: '图表与结果整理',
-    body: '不仅生成图，还能组织关键发现和结果说明，便于复核、汇报与提交。',
-  },
-  {
-    title: '团队与流程复用',
-    body: '把重复工作沉淀成技能与小程序，让常见分析流程变成可复用资产。',
+    title: '团队模板与流程复用',
+    body: '把重复工作沉淀成技能与小程序，让常见分析流程、图表样式和交付方式变成可复用资产。',
   },
 ];
 
@@ -97,24 +97,25 @@ export default function Home() {
   return (
     <Layout>
       <Head>
-        <title>Inkly Cat</title>
+        <title>Inkly Cat | 把科研数据变成可发表结果</title>
         <meta
           name="description"
-          content="面向数据分析工作的专业 agent，把表格处理、脚本执行、图表编辑和结果整理接成一条可复核、可交付的工作线。"
+          content="面向科研与高要求分析场景的结果型 agent，把表格处理、脚本执行、图表生成、结果段落和交付整理接成一条可复核的工作线。"
         />
       </Head>
       <main id="top" className={styles.page}>
         <section className={styles.hero}>
           <div className={styles.heroCopy}>
-            <p className={styles.kicker}>Inkly Cat / Data Analysis Workspace</p>
+            <p className={styles.kicker}>Inkly Cat / Scientific Analysis Workspace</p>
             <h1>
-              <span className={styles.heroHeadingLine}>面向数据分析工作的</span>
-              <span className={styles.heroHeadingLine}>专业 agent</span>
+              <span className={styles.heroHeadingLine}>把科研数据变成</span>
+              <span className={styles.heroHeadingLine}>可发表结果</span>
             </h1>
             <p className={styles.lead}>
-              把表格处理、脚本执行、图表生成与编辑、结果说明放在同一工作台里，
-              让原始数据更顺地推进成可复核、可交付的分析结果。
+              处理表格，运行脚本，生成期刊级图表，把结果段落和说明整理清楚。
+              让原始数据更顺地推进成可复核、可交付的正式分析结果。
             </p>
+            <p className={styles.heroSupport}>支持 CSV、Excel、代码执行、Bash 工作流和图表导出。</p>
             <div className={styles.heroActions}>
               <a
                 className={styles.primaryButton}
@@ -136,15 +137,17 @@ export default function Home() {
                 iOS App Store
               </a>
             </div>
-            <p className={styles.downloadMeta}>macOS 仅支持 Apple Silicon（ARM）。如果你先想判断工作方式，直接打开 Web 版就够了。</p>
+            <p className={styles.downloadMeta}>
+              macOS 仅支持 Apple Silicon（ARM）。如果你先想判断这条工作流是否适合你的研究或分析任务，直接打开 Web 版就够了。
+            </p>
             <div className={styles.heroSummary}>
               <div>
                 <strong>适合的任务</strong>
-                <p>需要反复分析、编辑图表、整理结论并最终交付的数据工作。</p>
+                <p>需要反复分析、编辑图表、整理结论并最终交付的科研与高要求分析任务。</p>
               </div>
               <div>
                 <strong>不想再发生的事</strong>
-                <p>在表格、脚本、图表工具和结果文档之间来回切换，导致上下文被打散。</p>
+                <p>在 Excel、脚本环境、图表工具和结果文档之间来回切换，导致上下文被打散。</p>
               </div>
             </div>
           </div>
@@ -162,12 +165,12 @@ export default function Home() {
 
             <div className={styles.heroAnnotationPrimary}>
               <strong>同一任务上下文</strong>
-              <p>对话、生成结果和后续修改没有断层。</p>
+              <p>分析、出图和结果整理没有断层。</p>
             </div>
 
             <div className={styles.heroAnnotationSecondary}>
               <span>结果仍可编辑</span>
-              <p>不是结束页，而是下一步工作的起点。</p>
+              <p>拿到的不是终点图，而是还能继续推进的工作结果。</p>
             </div>
           </div>
         </section>
@@ -185,8 +188,8 @@ export default function Home() {
         <section id="showcase" className={styles.showcaseSection}>
           <div className={styles.sectionIntro}>
             <p className={styles.eyebrow}>Product View</p>
-            <h2>从数据分析到图表编辑，工作流在一个界面里接起来</h2>
-            <p>产品最强的地方不是“能回答”，而是能把对话、图表和编辑动作留在同一条工作线上。</p>
+            <h2>从分析过程到图表编辑，工作流在一个界面里接起来</h2>
+            <p>产品最强的地方不是“能回答”，而是能把数据处理、脚本执行、图表编辑和结果整理留在同一条工作线上。</p>
           </div>
 
           <div className={styles.showcaseFrame}>
@@ -198,7 +201,7 @@ export default function Home() {
                 <p className={styles.eyebrow}>Chart Editor</p>
                 <h3>分析过程、图表本体和编辑面板并排展开</h3>
                 <p>
-                  左边保留任务上下文，中间是图表，右边是编辑面板。你拿到的不是一张结束的图，而是一份可以继续调整并正式导出的分析图表结果。
+                  左边保留任务上下文，中间是图表，右边是编辑面板。你拿到的不是一张结束的图，而是一份可以继续调整、复核并正式导出的分析结果。
                 </p>
               </div>
               <div id="workflow" className={styles.workflowRail}>
@@ -219,7 +222,7 @@ export default function Home() {
         <section id="reusable" className={styles.featureSection}>
           <div className={styles.sectionIntro}>
             <p className={styles.eyebrow}>Reusable Layers</p>
-            <h2>把一次任务沉淀成可复用方法</h2>
+            <h2>把一次分析沉淀成可复用方法</h2>
             <p>把高频动作变成技能，把稳定流程变成小程序，让下一次分析不必重新搭一遍。</p>
           </div>
 
@@ -245,8 +248,8 @@ export default function Home() {
         <section id="use-cases" className={styles.scenarioSection}>
           <div className={styles.sectionIntro}>
             <p className={styles.eyebrow}>Use Cases</p>
-            <h2>更适合那些对结果质量和可复核性有要求的数据分析任务</h2>
-            <p>Inkly Cat 不是万能 agent，它更适合那些既要分析，也要把结果整理清楚的数据工作。</p>
+            <h2>更适合那些对结果质量和可复核性有要求的研究与分析任务</h2>
+            <p>Inkly Cat 不是万能 agent，它更适合那些既要分析，也要把结果整理成正式交付物的工作。</p>
           </div>
 
           <div className={styles.scenarioList}>
@@ -266,8 +269,8 @@ export default function Home() {
           <div className={styles.ctaPanel}>
             <div className={styles.ctaLead}>
               <p className={styles.eyebrow}>Inkly Cat</p>
-              <h2>先打开工作台，再决定要不要装客户端</h2>
-              <p>如果你关心的是分析结果能不能持续推进、修改和整理，先看真实工作界面会比看一串功能点更有效。</p>
+              <h2>先看工作流，再决定要不要接进你的研究流程</h2>
+              <p>如果你关心的是原始数据能不能真正推进成图表、结果段落和可交付材料，先看真实工作界面会比看一串功能点更有效。</p>
             </div>
             <div className={styles.ctaAside}>
               <div className={styles.ctaActions}>
@@ -290,7 +293,9 @@ export default function Home() {
                   iOS App Store
                 </a>
               </div>
-              <p className={styles.downloadMeta}>macOS 仅支持 Apple Silicon（ARM），Windows 提供 x64 版本，iOS 通过 App Store 安装。</p>
+              <p className={styles.downloadMeta}>
+                macOS 仅支持 Apple Silicon（ARM），Windows 提供 x64 版本，iOS 通过 App Store 安装。
+              </p>
             </div>
           </div>
         </section>
